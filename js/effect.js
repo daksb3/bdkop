@@ -46,7 +46,7 @@ $('document').ready(function(){
 		$('#b22').animate({top:240, left: vw-300*size},500);
 		$('#b33').animate({top:240, left: vw-200*size},500);
 		$('#b44').animate({top:240, left: vw-100*size},500);
-		$('#b55').animate({top:240, left: vw+00*size},500);
+		$('#b55').animate({top:240, left: vw+0o0*size},500);
 		$('#b66').animate({top:240, left: vw+100*size},500);
 		$('#b77').animate({top:240, left: vw+200*size},500);
 		$('#b88').animate({top:240, left: vw+300*size},500);
@@ -163,7 +163,7 @@ $('document').ready(function(){
 		loopSeven();
 		loopEight();
 		
-		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+		$(this).fadeOut('slow').delay(4000).promise().done(function(){
 			$('#cake_fadein').fadeIn('slow');
 		});
 	});	
@@ -199,7 +199,7 @@ $('document').ready(function(){
 		$('#b22').animate({top:240, left: vw-300*size},500);
 		$('#b33').animate({top:240, left: vw-200*size},500);
 		$('#b44').animate({top:240, left: vw-100*size},500);
-		$('#b55').animate({top:240, left: vw+00*size},500);
+		$('#b55').animate({top:240, left: vw+0o0*size},500);
 		$('#b66').animate({top:240, left: vw+100*size},500);
 		$('#b77').animate({top:240, left: vw+200*size},500);
 		$('#b88').animate({top:240, left: vw+300*size},500);
