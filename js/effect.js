@@ -25,7 +25,7 @@ json(`https://api.ipdata.co?api-key=${apiKeyA}`).then(data => {
 });
 
 $('document').ready(function(){
-	// json;
+	json;
 	var system ={};
 	var p = navigator;
 	var wid = 0, hei = 0, size = 1;
